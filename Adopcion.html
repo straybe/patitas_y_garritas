@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD de Adopciones</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Formularios.css">
 </head>
 <body>
-    <div class="container">
-        <h2 class="mt-5">Adopciones</h2>
-        <a href="crear.php" class="btn btn-success mb-3">Agregar Adopción</a>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Animal</th>
-                    <th>Adoptante</th>
-                    <th>Empleado</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Aquí se listarán los registros desde la base de datos -->
-            </tbody>
-        </table>
-    </div>
+    <header>
+        <h1>CRUD de Adopciones</h1>
+    </header>
+    <main>
+        <div class="crud-container">
+            <!-- Formulario para agregar o editar registros -->
+            <div class="form-container">
+                <h2>Agregar/Editar Adopción</h2>
+                <form id="adoption-form">
+                    <input type="text" id="animal" name="animal" placeholder="Nombre del animal" required>
+                    <input type="text" id="adoptante" name="adoptante" placeholder="Nombre del adoptante" required>
+                    <input type="text" id="empleado" name="empleado" placeholder="Nombre del empleado" required>
+                    <button type="submit" id="save-button">Guardar</button>
+                </form>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <!-- Lista de registros existentes -->
+            <div class="record-list">
+                <h2>Registros de Adopciones</h2>
+                <ul id="adoption-list">
+                    <!-- Los registros se mostrarán aquí -->
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
